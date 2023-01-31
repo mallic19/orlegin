@@ -1,0 +1,534 @@
+<html> 
+  <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="https://kit.fontawesome.com/3efb728339.js" crossorigin="anonymous"></script>
+    <style>
+    /* global styles */
+   :root{
+     --black: black;
+     --light-black: #1a1a1a;
+     --light-black2: #404040;
+     --light-black3: #a6a6a6;
+   }
+      body{
+        margin: 0;
+        width: 100%;
+        background: var(--black);
+      }
+      
+      .inline-flex{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+      }
+     
+      
+      /*end global styles */
+      
+      .header{
+        background-color: var(--light-black);
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+      }
+      .header h1{
+        color: white;
+        padding-left: 7px;
+      }
+      
+      .header-icon button{
+        margin-right: 4px;
+        margin-left: 2px;
+        font-size: 17px;
+      }
+      
+      .search{
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        border: 1px solid var(--light-black2);
+        color: white;
+        background: var(--light-black2);
+      }
+      
+      .nav1{
+        background: var(--light-black);
+        height: 40px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        border-bottom: 0.02em solid var(--light-black2);
+      }
+      
+      .nav1-icons{
+        height: 35px;
+        width: 35px;
+        color: white;
+        border: none;
+        background:  var(--light-black);
+        font-size: 22px;
+      }
+      
+      .hero{
+        display: flex;
+        height: 60px;
+        align-items: center;
+        padding: 8px 3px 5px 3px;
+        background: var(--light-black);
+      }
+      .hero1{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+      }
+      .hero1  .profile-img{
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        margin: 0;
+        padding: 10px;
+      }
+      
+      .hero1 .online-btn{
+        height: 15px;
+        width: 15px;
+        background: #07ff07;
+        border:2px solid black;
+        border-radius: 50%;
+        position: relative;
+        left: -20px;
+        top: 14px;
+      }
+      .hero p{
+        color: white;
+      }
+      .hero1 p {
+        color: white;
+        padding-left: 3px;
+        font-size: 13px;
+      }
+      
+      .hero1 .divider{
+        width: 1px;
+        height: 46px;
+        margin-top: 7px;
+        margin-left: 60px;
+        background-color: var(--light-black2);
+      }
+      .hero2 {
+        display: inline;
+        text-align: center;
+        align-items: center;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+      
+      .hero2 .gallery-icon{
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: -7px;
+        padding: 0;
+      }
+      .hero2 .ptxt{
+        margin: 0;
+        padding-top: 4px;
+        text-align: center;
+        font-size: 12px;
+      }
+      
+      .nav2{
+        display: flex;
+        background: var(--light-black);
+        height: 40px;
+        justify-content: space-around;
+        align-items: center;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      
+      .nav2-content{
+        font-size: 17px;
+      }
+      .nav2 p{
+        color: white;
+        text-align: center;
+        padding: 0 2px 0 6px;
+      }
+       .blue{
+        color: lightblue;
+      }
+      .red{
+        color: red;
+      }
+      .pink{
+        color: pink;
+      }
+      
+      .border{
+         border-right: 1px solid var(--light-black3);
+         border-left: 1px solid var(--light-black3);
+         height: 60%;
+        padding-right: 22px;
+        padding-left: 20px;
+      }
+      .story{
+        display: block;
+        margin-top: 8px;
+        padding: 10px 5px 10px 5px;
+        overflow-x: scroll;
+        white-space: nowrap;
+        background: var(--light-black);
+        height: 160px;
+      }
+  
+      .story .story-container{
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        height: 155px;
+        width: 95px;
+        border-radius: 15px;
+        background: url("orle.jpg");
+        background: url("irene2.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      
+      .story-container .overlay{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #00000083;
+        filter: blur(2px);
+        height: 30px;
+        width: 100px;
+      }
+      
+      .add-story{
+        background: url("orle.jpg")!important;
+        background-position: center !important;
+        background-size: cover !important;
+      }
+      
+      .add-story-text{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 95px;
+        left: 0;
+        background: var(--light-black2);
+        height: 70px;
+        width: 95px;
+      }
+      .add-story-text button{
+        position: absolute;
+        top: -10px;
+        left: 35px;
+        height: 25px;
+        width: 25px;
+        border: 1px solid white;
+        border-radius: 50%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        background: blue;
+      }
+      .add-story-text i{
+        color: white;
+        font-weight: 100;
+        font-size: 10px;
+      }
+       img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: bottom;
+      }
+      .story-container .story-container-btn{
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        width: 20px;
+        height: 25px;
+        font-size: 10px;
+        padding: 0;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        border: none;
+        border-radius: 4px;
+        background: rgb(47,92,235);
+        color: white;
+      }
+      
+      .story-container .story-container-p{
+        position: absolute;
+        color: white;
+        bottom: -12px;
+        left: 17px;
+        font-weight: 500;
+        font-size: 13px;
+      }
+      
+      .posts{
+        position: relative;
+        display: flex;
+        background: var(--light-black);
+        min-height: 63px;
+        margin-top: 10px;
+        border-top: 1px solid var(--light-black2);
+        padding: 6px 4px 3px 4px;
+      }
+      
+      .posts .group-image{
+        position: relative;
+        height: 50px;
+        width: 50px;
+        border-radius: 30%;
+      }
+      
+      .posts .author{
+        position: relative;
+        left: -20px;
+        top: 14px;
+        position: relative;
+        bottom: -27px;
+        left: -19px;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        border: 1px solid var(--light-black2);
+      }
+      
+      .posts div{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+      }
+      
+      .posts .group-title{
+        color: white;
+        padding-left: 17px;
+        margin-top: 1px;
+        margin-left: -30px;
+        font-size: 0.9em;
+        font-weight: 600;
+      }
+      
+      .posts .author-name{
+        color: #aeaeae;
+        margin-top: -15px;
+        margin-left: -12px;
+        font-size: 11px;
+        font-weight: 400;
+      }
+      
+      .posts .post-menu{
+        color: white;
+        position: absolute;
+        right: 9px;
+        top: -19px;
+        font-size: 24px;
+        font-weight: 500;
+      }
+      
+      .post-content{
+        width: 100%;
+        height: 300px;
+        border: 1px;
+      }
+      
+      .post-reaction{
+        display: flex;
+        position: relative;
+        background: var(--light-black);
+        height: 30px;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 30px;
+        padding-bottom: 10px;
+      }
+      
+      .post-reaction button{
+        background: var(--light-black2);
+        border: none;
+        border-radius: 19px;
+        color: white;
+        padding: 9px 35px 9px 35px;
+        font-size: 15px;
+      }
+      .post-reaction .all-reaction{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-left: 8px;
+        padding-top: 4px;
+      }
+      
+      .all-reaction button{
+        padding: 0;
+        height: 20px;
+        width: 20px;
+        border: 1px solid black;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 12px;
+      }
+      
+      .all-reaction .red{
+        background: red;
+      }
+      .all-reaction .blue{
+        position: relative;
+        margin-right: -8px;
+        background:#4747e8;
+      }
+      
+      .all-reaction .reaction-count{
+        background: #00000000;
+        padding: 0;
+        margin-left: -3px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--light-black3);
+      }
+    
+ 
+    
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div>
+      <h1>facebook</h1>
+      </div>
+      <div class="header-icon">
+      <button class="search" href="#"><i class="fa fa-search"></i></button>
+      <button class="search" href="#"><i class="fa fa-bars"></i></button>
+      </div>
+      </header>
+      
+      
+      <div class="nav1">
+        <button class="nav1-icons" href="#"><i class="fa fa-home"></i></button>
+        <button class="nav1-icons" href="#"><i class="fa fa-user-group"></i></button>
+        <button class="nav1-icons" href="#"><i class="fa-brands fa-facebook-messenger"></i></button>
+        <button class="nav1-icons" href="#"><i class="fa fa-bell"></i></button>
+        <button class="nav1-icons" href="#"><i class="fa fa-tv"></i></button>
+ <button class="nav1-icons" href="#"><i class="fa fa-flag"></i></button>
+      </div>
+      
+      <div class="hero">
+        <div class="hero1">
+        <img src="orle.jpg" class="profile-img">
+        <button class="online-btn"></button>
+        <p>What's on your mind?</p>
+        <div class="divider"></div>
+        </div>
+        <div class="hero2">
+          <a class="gallery-icon" href="#"><i class="fa fa-image"></i></a>
+          <p class="ptxt">photo</p>
+        </div>
+      </div>
+      
+      <div class="nav2">
+        <div class="inline-flex">
+        <a class="nav2-content blue inline"><i class="fa fa-edit"></i></a>
+        <p>Text</p>
+        </div>  
+        <div class="inline-flex border">
+        <a class="nav2-content red inline"><i class="fa fa-camera"></i></a>
+        <p>Live Video</p>
+        </div>
+            <div class="inline-flex">
+        <a class="nav2-content pink inline"><i class="fa fa-map"></i></a>
+        <p>Location</p>
+        </div>
+      </div>
+      
+      <div class="story">
+          <div class="add-story story-container">
+            <div class="add-story-text">
+                <button><i class="fa fa-plus"></i></button>
+                <p>Add to<br> story</p>
+            </div>
+ 
+          </div>
+          <div class="story-container">
+            <div class="overlay"></div>
+            <button class="story-container-btn">3</button>
+            <img src="hows.jpg" class="story-img">
+            <p class="story-container-p">Jomarie<br>Dalanon</br>
+          </div>
+          <div class="story-container">
+            <div class="overlay"></div>
+            <button class="story-container-btn">5</button>
+            <img src="irene.jpg" class="story-img">
+            <p class="story-container-p">Irene<br>Ducay</br>
+          </div>
+          <div class="story-container">
+            <div class="overlay"></div>
+            <button class="story-container-btn">2</button>
+            <p class="story-container-p">Gino<br>Layese</p>
+            <img src="gino.jpg" class="story-img">
+            </div>
+          <div class="story-container">
+            <div class="overlay"></div>
+            <button class="story-container-btn">5</button>
+            <p class="story-container-p">Walter</p>
+          </div>
+          <div class="story-container">
+            <div class="overlay"></div>
+            <button class="story-container-btn">5</button>
+            <p class="story-container-p">Walter</p>
+          </div>
+          <div class="story-container">
+            <div class="overlay"></div>
+            <button class="story-container-btn">5</button>
+            <p class="story-container-p">Walter</p>
+          </div>
+      </div>
+      <div class="posts">
+        <img class="group-image" src="mcc.jpg">
+        <img class="author" src="mark.jpg">
+        <div>
+        <p class="group-title">Madridejos Community College</p>
+        <p class="author-name">Mark Wilson Rebamonte &nbsp; • &nbsp; 20min  &nbsp; • &nbsp&nbsp;<i class="fa fa-globe"></i></p>
+      </div>
+        <p class="post-menu">...</p>
+      </div>
+      
+      <div class="post-content">
+        <img src="mark1.jpg">
+      </div>
+      
+      <div class="post-reaction">
+        <div class="all-reaction">
+          <button class="blue"><i class="fa fa-thumbs-up"></i></button>
+          <button class="red"><i class="fa fa-heart"></i></button>
+          <button class="reaction-count">200</button>
+        </div>
+        <div class="react">
+          <button class="react"><i class="fa fa-thumbs-up"></i>&nbsp;&nbsp;200</button>
+        </div>
+      <div class="comment">
+          <button class="comment"><i class="fa fa-comment"></i>&nbsp;&nbsp;76</button>
+        </div>
+      <div class="share">
+          <button class="share"><i class="fa fa-share"></i>&nbsp;&nbsp;12</button>
+        </div>
+        
+      </div>
+  </body>
+</html>
